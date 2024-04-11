@@ -1,74 +1,30 @@
-print("Desafio 1-1")
+print("DESAfIO 1 - 1")
 def numbers():
-    return list(range(1, 16))
-for num in numbers():
-    print(num)
+  list = [1, 2, 3, 4, 5]
+  return list
+for positon, element in enumerate(numbers()):
+  print(f"Posicao :{positon}| Valor :{element}")
 
-print("Desafio 1-2")  
+print("DESAFIO 1 - 2")
 def numbers():
-    return list(range(1, 16))
-for num in numbers():    
-    print(num)
-
-print("Desafio 1-3")
-def numbers():
-    nums = list(range(1, 16))
-    return nums
-
-for num in numbers():
-    if num % 2 == 0:
-        print(num)    
-
-print("Desafio 1-4")
-def numbers():
-    nums = list(range(1, 16))
-    return nums
-
-for num in numbers():
-    if num % 2 != 0:
-        print(num)
-
-print("Desafio 1-5(Os multiplos dos 3 em conjunto)")        
-def numbers():
-    nums = list(range(1, 16))
-    return nums
-
-for num in numbers():
-    if num % 2 == 0 and num % 3 == 0 and num % 4 == 0:
-        print(num)
-
-print("Desafio 1-5(Multiplos de cada um deles)")        
-def numbers():
-    nums = list(range(1, 16))
-    return nums
-
-for num in numbers():
-    if num % 2 == 0:
-        print(f"{num} é múltiplo de 2")
-    if num % 3 == 0:
-        print(f"{num} é múltiplo de 3")
-    if num % 4 == 0:
-        print(f"{num} é múltiplo de 4")
-
-print("Desafio 1-6")
-def numbers():
-    nums = list(range(1, 16))
-    return nums
+    list =[0, 1, 2, 3, 4, 5 , 6 ,7, 8, 9, 10]
+    return list
 
 for num in reversed(numbers()):
     print(num)
 
-print("Desafio 1-7")
-def numbers():
-    nums1 = list(range(1, 16))
-    nums2 = list(range(1, 16))
-    return nums1, nums2
+print("DESAFIO 1 - 3")
+def note():
+  notas = [6, 8, 4, 10]
+  return notas
+total  = sum(note())
+print(f"A soma das notas e de: {total}")
+media = total / 2
+print(f"A media das notas e:{media}")
 
-soma1 = sum(numbers()[0])
-soma2 = sum(numbers()[1])
-
-razao = soma1 / soma2
-
-print("Lista 1:", numbers()[0])
-print("Lista 2:", numbers()[1])
-print("Razão:", round(razao, 2))
+print("DESAFIO 2 - 4")
+def ages():
+  idades = [18,2 ,7, 98, 16, 20, 76, 34, 52, 64, 2 , 35, 22, 28, 10, 17,15, 19, 40, 41]
+  return idades
+print("A maior idade", max(ages()))
+print("A menor idade", min(ages()))

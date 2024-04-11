@@ -1,30 +1,45 @@
-print("DESAfIO 2 - 1")
-def numbers():
-  list = [1, 2, 3, 4, 5]
-  return list
-for positon, element in enumerate(numbers()):
-  print(f"Posicao :{positon}| Valor :{element}")
+print("DESAFIO 2 - 1")
+def nums():
+  lista = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 14, 16, 17, 18, 19, 20]
+  pares = []
+  impares = []
+   
+  for num in lista:
+      if num % 2 == 0:
+          pares.append(num)
+      else:
+          impares.append(num)
+  
+  print ("\nOs numeros do vetor sao:\n", pares,"\nOs numeros pares são:\n",impares)
 
-print("DESAFIO 2 - 2")
-def numbers():
-    nums = list(range(1, 11))
-    return nums
+nums()
 
-for num in reversed(numbers()):
-    print(num)
+def temperatura():
+    meses = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
+    ]
+    temperaturas = []
+    for i in range(12):
+        temperaturas.append(
+            float(input(f"Digite a temperatura de {meses[i]} em ºC: "))
+        )
 
-print("DESAFIO 2 - 3")
-def note():
-  notas = [6, 8, 4, 10]
-  return notas
-total  = sum(note())
-print(f"A soma das notas e de: {total}")
-media = total / 2
-print(f"A media das notas e:{media}")
+    media = sum(temperaturas) / 12
+    print(f"\nA média das temperaturas foi {media:.2f}ºC")
+    print("Meses com temperaturas acima da média: ")
+    for i in range(12):
+        if temperaturas[i] > media:
+            print(f"{i+1} - {meses[i]} com {temperaturas[i]:.2f}ºC")
 
-print("DESAFIO 2 - 4")
-def ages():
-  idades = [18,2 ,7, 98, 16, 20, 76, 34, 52, 64, 2 , 35, 22, 28, 10, 17,15, 19, 40, 41]
-  return idades
-print("A maior idade", max(ages()))
-print("A menor idade", min(ages()))
+temperatura()

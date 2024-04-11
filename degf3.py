@@ -1,12 +1,33 @@
-def separate_numbers():
-  numbers = list(range(21))
+def criar_matriz():
+    n = int(input("Digite o tamanho da matriz (n x n): "))
+    matriz = [[0]*n for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            matriz[i][j] = int(input(f"Digite o elemento [{i+1}][{j+1}]: "))
+    return matriz
 
-  pares = numbers[::2]
-  impares = numbers[1::2]
+matriz = criar_matriz()
 
-  return pares, impares
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(matriz[i][j], end=" ")
+    print()
+    
+def criar_matriz2():
+    n = int(input("Digite o tamanho da matriz (n x n): "))
+    matriz = [[0]*n for _ in range(n)]
+    for i in range(n):
+        for j in range(n):
+            matriz[i][j] = int(input(f"Digite o elemento [{i+1}][{j+1}]: "))
+    return matriz
 
-pares, impares = separate_numbers()
+matriz = criar_matriz2()
 
-print("Números pares: ", pares)
-print("Números ímpares: ", impares) 
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        matriz[i][j] = matriz[i][j] * 2
+
+for i in range(len(matriz)):
+    for j in range(len(matriz[i])):
+        print(matriz[i][j], end=" ")
+    print()   
